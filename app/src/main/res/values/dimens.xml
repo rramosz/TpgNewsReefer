@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="edit_text_file_login" >22sp</dimen>
+    <dimen name="padding_horizontal" >32dp</dimen>
+    <dimen name="edit_margin_create">10dp</dimen>
+    <dimen name="height_picture">200dp</dimen>
+    <dimen name="corner_radios">4dp</dimen>
+    <dimen name="paddig_left">16dp</dimen>
+    <dimen name="text_size_username_card">25sp</dimen>
+    <dimen name="firstword_text_site_card">15sp</dimen>
+    <dimen name="like_margin_top_card">10dp</dimen>
+    <dimen name="appbar_height_layout">256dp</dimen>
+    <dimen name="user_name_detail">25sp</dimen>
+    <dimen name="activity_vertical_padding">16dp</dimen>
+    <dimen name="like_text_size">15sp</dimen>
+    <dimen name="margin_left_second_word">7dp</dimen>
+    <dimen name="height_view_divider">1dp</dimen>
+    <dimen name="top_text_view_title_image">20dp</dimen>
+    <dimen name="padding_horizontal_detsail_left">70dp</dimen>
+    <dimen name="height_bottom_bar">70dp</dimen>
+    <dimen name="fab_margin">20dp</dimen>
+    <dimen name="circle_image_profile">160dp</dimen>
+    <dimen name="margintop_circle_image">30dp</dimen>
+    <dimen name="elevation_circle_profile">10dp</dimen>
+    <dimen name="limitandy_circle_image">-206dp</dimen>
+    <dimen name="margint_top_toolbar_circle_profile">-3dp</dimen>
+    <dimen name="with_image_circle_profile">30dp</dimen>
+    <dimen name="text_size_user_name_toolbar_profile">18dp</dimen>
+    <dimen name="margin_left_text_view_image_circle">72dp</dimen>
+    <dimen name="margin_top_text_view_image_circle">-100dp</dimen>
+    <dimen name="limitY_user_name_tool_bar_profile">-250dp</dimen>
+    <dimen name="margint_top_user_name_toolbar_profile">-5dp</dimen>
+    <dimen name="activity_vertical_padding_image_circle">5dp</dimen>
+
+
+</resources>

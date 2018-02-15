@@ -1,0 +1,116 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".view.fragment.ProfileFragment">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+
+
+        >
+<!--android:theme="@style/AppTheme.AppBarOverlay"-->
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            app:statusBarScrim="@color/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="200dp"
+                android:paddingBottom="20dp"
+                android:layout_gravity="center|top"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:gravity="center"
+                >
+
+
+                <TextView
+                    android:id="@+id/user_name_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_size_username_card"
+                    android:text="Ricky Ramos"
+                    />
+            </LinearLayout>
+
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/picture_profile_recicler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_marginTop="10dp"
+        />
+
+
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="@dimen/circle_image_profile"
+        android:layout_height="@dimen/circle_image_profile"
+        android:src="@drawable/fondo_tpg_login_gruas_nave"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="@dimen/margintop_circle_image"
+        android:elevation="@dimen/elevation_circle_profile"
+
+        app:layout_behavior="com.zoonref.SimpleViewBehavior"
+        app:dependsOn="@+id/appbar"
+        app:dependType="y"
+        app:dependTargetY="@dimen/limitandy_circle_image"
+        app:targetX="@dimen/activity_vertical_padding_image_circle"
+        app:targetY="@dimen/margint_top_toolbar_circle_profile"
+        app:targetWidth="@dimen/with_image_circle_profile"
+        app:targetHeight="@dimen/with_image_circle_profile"
+
+        />
+
+
+    <!--<TextView
+        android:id="@+id/user_name_toolbar_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ricky Ramos"
+        android:textSize="@dimen/text_size_user_name_toolbar_profile"
+        android:elevation="@dimen/elevation_circle_profile"
+        android:layout_marginLeft="@dimen/margin_left_text_view_image_circle"
+        android:layout_marginTop="@dimen/margin_top_text_view_image_circle"
+        android:gravity="center_vertical"
+        android:textColor="@color/colorWhite"
+        android:alpha="0"
+        app:dependType="y"
+        app:dependTargetY="@dimen/limitY_user_name_tool_bar_profile"
+        app:targetY="@dimen/margint_top_user_name_toolbar_profile"
+        app:dependsOn="@+id/appbar"
+        app:layout_behavior="com.zoonref.SimpleViewBehavior"
+        app:targetAlpha="1"
+        />-->
+
+
+
+</android.support.design.widget.CoordinatorLayout>

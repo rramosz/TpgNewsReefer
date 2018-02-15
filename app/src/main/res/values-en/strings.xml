@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TpgNews</string>
+    <string name="app_title_activity_login">Login TPG News</string>
+    <string name="hint_username">Your UserName</string>
+    <string name="hint_password">Password</string>
+    <string name="text_button">Login</string>
+    <string name="dont_have_account">No have account?, </string>
+    <string name="crear_cuenta"> Create Account Here.</string>
+</resources>
