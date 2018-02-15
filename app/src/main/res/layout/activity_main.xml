@@ -100,7 +100,6 @@
             android:onClick="login"
             android:layout_marginTop="30dp"
 
-
             />
             </LinearLayout>
 
@@ -114,7 +113,7 @@
                 android:id="@+id/label_no_have_count"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/dont_have_account"
+                android:text="@string/dont_have_account  ricky ramos"
                 android:textColor="@color/colorWhite"
                 android:textStyle="bold"
                 />
