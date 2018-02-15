@@ -113,7 +113,7 @@
                 android:id="@+id/label_no_have_count"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/dont_have_account  ricky ramos"
+                android:text="@string/dont_have_account  ricky"
                 android:textColor="@color/colorWhite"
                 android:textStyle="bold"
                 />
