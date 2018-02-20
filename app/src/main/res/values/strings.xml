@@ -25,4 +25,21 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="transition_name_picture">transition_name_picture</string>
+
+
+
+        <string-array name="lista_depositos">
+            <item>ARETINA S.A.</item>
+            <item>CHIQUITA BANANA ECUADOR</item>
+            <item>CONTECON GUAYAQUIL S.A.</item>
+            <item>DEPCONSA</item>
+            <item>FARBEM NORTE</item>
+            <item>OPACIF  (OPERADORA DEL PACIFICO S.A.)</item>
+            <item>REPCONTVER</item>
+            <item>TASESA</item>
+            <item>TERCON</item>
+            <item>TPG</item>
+        </string-array>
+
+
 </resources>
