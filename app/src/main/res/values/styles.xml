@@ -8,30 +8,30 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="RaisedButtonDark" parent="Theme.AppCompat.Light" >
+    <style name="RaisedButtonDark" parent="Theme.AppCompat.Light">
         <item name="android:colorButtonNormal">@color/colorPrimaryDark</item>
         <item name="android:colorControlHighlight">@color/colorPrimary</item>
         <item name="android:textColor">@color/colorWhite</item>
-        
+
     </style>
 
-    <style  name="EditTextBlue" parent="TextAppearance.AppCompat" >
-        <item name="android:textColorHint" >@color/colorAccent</item>
-        <item name="android:textSize" >@dimen/edit_text_file_login</item>
-        <item name="android:textColorPrimary" >@color/colorAccent</item>
-        <item name="android:colorAccent" >@color/colorAccent</item>
-        <item name="android:colorControlNormal" >@color/colorAccent</item>
-        <item name="android:colorControlActivated" >@color/colorAccent</item>
+    <style name="EditTextBlue" parent="TextAppearance.AppCompat">
+        <item name="android:textColorHint">@color/colorAccent</item>
+        <item name="android:textSize">@dimen/edit_text_file_login</item>
+        <item name="android:textColorPrimary">@color/colorAccent</item>
+        <item name="android:colorAccent">@color/colorAccent</item>
+        <item name="android:colorControlNormal">@color/colorAccent</item>
+        <item name="android:colorControlActivated">@color/colorAccent</item>
     </style>
 
 
-    <style  name="EditTextWhite" parent="TextAppearance.AppCompat" >
-        <item name="android:textColorHint" >@color/colorWhite</item>
-        <item name="android:textSize" >@dimen/edit_text_file_login</item>
-        <item name="android:textColorPrimary" >@color/colorWhite</item>
-        <item name="android:colorAccent" >@color/colorWhite</item>
-        <item name="android:colorControlNormal" >@color/colorWhite</item>
-        <item name="android:colorControlActivated" >@color/colorWhite</item>
+    <style name="EditTextWhite" parent="TextAppearance.AppCompat">
+        <item name="android:textColorHint">@color/colorWhite</item>
+        <item name="android:textSize">@dimen/edit_text_file_login</item>
+        <item name="android:textColorPrimary">@color/colorWhite</item>
+        <item name="android:colorAccent">@color/colorWhite</item>
+        <item name="android:colorControlNormal">@color/colorWhite</item>
+        <item name="android:colorControlActivated">@color/colorWhite</item>
     </style>
 
 
@@ -43,5 +43,9 @@
     <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
         <item name="color">@color/colorWhite</item>
     </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>

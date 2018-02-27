@@ -18,6 +18,7 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 
 import ec.com.tpg.tpgnews.R;
+import ec.com.tpg.tpgnews.menu_principal;
 import ec.com.tpg.tpgnews.model.Picture;
 import ec.com.tpg.tpgnews.view.PictureDetailActvity;
 
@@ -56,7 +57,8 @@ public class PictureAdapterRecyclerView extends RecyclerView.Adapter<PictureAdap
             public void onClick(View view) {
 
 
-                Intent intent = new Intent(activity, PictureDetailActvity.class);
+                //Intent intent = new Intent(activity, PictureDetailActvity.class);  Se comento para invocar al menu
+                Intent intent = new Intent(activity, menu_principal.class);
                 /*Toast.makeText(activity, "This is my Toast message!",
                         Toast.LENGTH_LONG).show();*/
                 if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)

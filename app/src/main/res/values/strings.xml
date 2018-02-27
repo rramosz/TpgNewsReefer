@@ -27,19 +27,24 @@
     <string name="transition_name_picture">transition_name_picture</string>
 
 
+    <string-array name="lista_depositos">
+        <item>ARETINA S.A.</item>
+        <item>CHIQUITA BANANA ECUADOR</item>
+        <item>CONTECON GUAYAQUIL S.A.</item>
+        <item>DEPCONSA</item>
+        <item>FARBEM NORTE</item>
+        <item>OPACIF  (OPERADORA DEL PACIFICO S.A.)</item>
+        <item>REPCONTVER</item>
+        <item>TASESA</item>
+        <item>TERCON</item>
+        <item>TPG</item>
+    </string-array>
+    <string name="title_activity_menu_principal">menu_principal</string>
 
-        <string-array name="lista_depositos">
-            <item>ARETINA S.A.</item>
-            <item>CHIQUITA BANANA ECUADOR</item>
-            <item>CONTECON GUAYAQUIL S.A.</item>
-            <item>DEPCONSA</item>
-            <item>FARBEM NORTE</item>
-            <item>OPACIF  (OPERADORA DEL PACIFICO S.A.)</item>
-            <item>REPCONTVER</item>
-            <item>TASESA</item>
-            <item>TERCON</item>
-            <item>TPG</item>
-        </string-array>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
 
 
 </resources>

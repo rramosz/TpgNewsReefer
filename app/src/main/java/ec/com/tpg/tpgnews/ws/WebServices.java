@@ -18,10 +18,10 @@ public class WebServices {
 
 
 
-        private static final String NAMESPACE = "http://main.tpg.inarpi.ecuador.com/";
-        private static final String URL ="http://192.168.0.247:8080/RegistraAlertasCntReefer/RegistraAlertasCntReefer?wsdl";
-        private static final String SOAP_ACTION ="http://main.tpg.inarpi.ecuador.com/login";
-        private static final String METHOD_NAME = "login";
+        private String NAMESPACE = "http://main.tpg.inarpi.ecuador.com/";
+        private String URL ="http://192.168.0.247:8080/RegistraAlertasCntReefer/RegistraAlertasCntReefer?wsdl";
+        private String SOAP_ACTION ="http://main.tpg.inarpi.ecuador.com/login";
+        private String METHOD_NAME = "login";
 
 
 
@@ -32,7 +32,8 @@ public class WebServices {
 
             //StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
             //StrictMode.setThreadPolicy(policy);
-
+            METHOD_NAME = "login";
+            SOAP_ACTION=NAMESPACE+METHOD_NAME;
             try{
 
                 SoapObject request;
@@ -46,7 +47,7 @@ public class WebServices {
 
                 request.addProperty("usuario","desa1");
                 request.addProperty("password","USuario001");
-                request.addProperty("uid_aplicacion","122555511244488888888");
+                request.addProperty("uid_aplicacion","17aca7055e4f4817b1ff83eccb3bc140");
 
                 envelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
 

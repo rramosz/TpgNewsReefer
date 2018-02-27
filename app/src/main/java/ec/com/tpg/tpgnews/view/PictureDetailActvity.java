@@ -4,6 +4,7 @@ package ec.com.tpg.tpgnews.view;
 import android.content.res.Resources;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -18,16 +19,19 @@ import java.util.ArrayList;
 import ec.com.tpg.tpgnews.R;
 import ec.com.tpg.tpgnews.ws.WebServices;
 
+import static android.app.ActionBar.DISPLAY_HOME_AS_UP;
+
 public class PictureDetailActvity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detalle_contenedor_reefer);
-        showToolBar("", true);
+        setContentView(R.layout.picture_detail_actvity);
+        //showToolBar("TPG", false);
 
 
 
+       /*
 
         SearchableSpinner spinner_depot=(SearchableSpinner) findViewById(R.id.spinner_depositos);
         Resources res = getResources();
@@ -53,7 +57,7 @@ public class PictureDetailActvity extends AppCompatActivity {
             public void onClick(View v) {
                 getDeposito();
             }
-        });
+        });*/
     }
     public void getDeposito()
     {
@@ -75,8 +79,21 @@ public class PictureDetailActvity extends AppCompatActivity {
         Toolbar toolbar= (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle(title);
-        getSupportActionBar().setSubtitle("Prueba");
+        getSupportActionBar().setSubtitle("Registro de Alarmas Reefer");
+        toolbar.setLogo(R.drawable.icono_tpg);
         getSupportActionBar().setDisplayHomeAsUpEnabled(atras);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
+
+
+            // Fixes issue #746
+            int displayOptions = getSupportActionBar().getDisplayOptions();
+        getSupportActionBar().setHomeButtonEnabled((displayOptions & DISPLAY_HOME_AS_UP) != 0);
+
+
+//        getSupportActionBar().addOnMenuVisibilityListener();
+ //       getSupportActionBar().setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+ //       getSupportActionBar().setDisplayOptions(0, ActionBar.DISPLAY_SHOW_TITLE);
         CollapsingToolbarLayout collapsing_tool_bar_layout= (CollapsingToolbarLayout) findViewById(R.id.collapsing_layout);
 
         //Codigo para asignar un icono ocmo UP

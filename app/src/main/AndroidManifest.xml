@@ -36,7 +36,11 @@
                 android:value=".MainActivity" />
         </activity>
         <activity android:name=".view.ContainerActivity" />
-        <activity android:name=".view.DetalleContenedoReeferActivity"/>
+        <activity android:name=".view.DetalleContenedoReeferActivity" />
+        <activity
+            android:name=".menu_principal"
+            android:label="@string/title_activity_menu_principal"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>
