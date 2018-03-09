@@ -4,7 +4,7 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/colorAccent</item><!--colorPrimaryDark</item>-->
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
@@ -33,6 +33,18 @@
         <item name="android:colorControlNormal">@color/colorWhite</item>
         <item name="android:colorControlActivated">@color/colorWhite</item>
     </style>
+
+
+
+    <style name="EditTexBlack" parent="TextAppearance.AppCompat">
+        <item name="android:textColorHint">@color/colorGrisOscuro</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColorPrimary">@color/colorGrisOscuro</item>
+        <item name="android:colorAccent">@color/colorGrisOscuro</item>
+        <item name="android:colorControlNormal">@color/colorGrisOscuro</item>
+        <item name="android:colorControlActivated">@color/colorGrisOscuro</item>
+    </style>
+
 
 
     <style name="ActionBarTitleText" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">

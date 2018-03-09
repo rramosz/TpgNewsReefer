@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:cardview="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/picture_card_popup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/height_bottom_bar"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="100dp"
+        android:elevation="10dp"
+        cardview:cardCornerRadius="@dimen/corner_radios">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="50dp"
+                android:background="@drawable/icono_tpg"
+                android:layout_weight="0.30"
+                />
+
+            <TextView
+                android:id="@+id/titulo_mensaje"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1.00"
+                android:gravity="center"
+                android:text="Confirme Transacción APP TPG"
+                android:textSize="16dp"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.60"
+                android:background="@color/colorWhite"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@color/colorWhite"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:id="@+id/image_icon_popup"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:background="@drawable/icon_interrogacion"
+                        />
+
+                    <TextView
+                        android:id="@+id/mensaje_descripcion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="15dp"
+                        android:textSize="15dp"
+                        android:text="Cuerpo del mensaje"
+                        android:textColor="@color/color_gris"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:orientation="vertical"
+                        android:layout_weight="0.91"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_horizontal"
+                        />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorWhite"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp">
+
+                    <Button
+                        android:id="@+id/button_aceptar_confirm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Aceptar"
+                        android:theme="@style/RaisedButtonDark"
+                        android:onClick="login"
+                        android:background="@color/colorAccent"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="0.50"
+
+                        />
+
+                    <Button
+                        android:id="@+id/button_cancelar_confirm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cancelar"
+                        android:theme="@style/RaisedButtonDark"
+                        android:onClick="login"
+                        android:layout_weight="0.50"
+                        android:background="@color/color_gris"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+
+                        />
+
+                    </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floating_button_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_anchorGravity="top|right|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/icon_cerrar"
+        app:backgroundTint="@color/colorAccent"
+        app:layout_anchor="@+id/picture_card_popup"
+        app:fabSize="auto"
+
+        />
+
+</android.support.design.widget.CoordinatorLayout>

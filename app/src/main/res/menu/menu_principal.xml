@@ -2,8 +2,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/action_cerrar_sesion"
         android:orderInCategory="100"
         android:title="Cerrar Sesión"
-        app:showAsAction="never" />
+        android:icon="@drawable/icons_warning"
+        app:showAsAction="never"
+        />
 </menu>

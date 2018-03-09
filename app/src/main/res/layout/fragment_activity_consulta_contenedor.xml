@@ -1,0 +1,113 @@
+<android.support.design.widget.CoordinatorLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frame_layout_contenedor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo_gris_light"
+    tools:context="layout.activity_consulta_contenedor">
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+
+
+        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:cardview="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/picture_card_consulta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/height_bottom_bar"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:elevation="10dp"
+            cardview:cardCornerRadius="@dimen/corner_radios">
+
+
+
+
+
+        <LinearLayout
+            android:id="@+id/linear_pr_consulta"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@xml/bordes"
+                android:gravity="center"
+                android:text="Nueva Alarma Reefer"
+                android:textColor="@color/colorWhite"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/colorBlack"
+                android:theme="@style/EditTexBlack"
+
+                >
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/txt_cnt_consulta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Ingrese el Contenedor"
+                    android:textSize="40dp"
+                    android:inputType="text"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+                    android:maxLength="11"
+                    />
+
+            </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+
+
+
+
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/action_button_cnt_cons"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_icons8_search_filled_50"
+        app:backgroundTint="@color/colorAccent"
+        app:fabSize="auto"
+        app:layout_anchor="@id/picture_card_consulta"
+        app:layout_anchorGravity="bottom|right|end"
+        />
+
+
+
+
+
+</android.support.design.widget.CoordinatorLayout>

@@ -2,13 +2,16 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
 
+
     >
 
 
-    <group android:checkableBehavior="single">
+    <group android:checkableBehavior="single"
+        >
+
         <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
+            android:id="@+id/nav_nueva_alarma"
+            android:icon="@drawable/icons_alarma"
             android:title="Nueva Alarma Reefer"
             app:showAsAction="ifRoom|withText"
             />
@@ -26,11 +29,13 @@
             android:title="Tools" />-->
     </group>
 
-    <item android:title="Sesión"  >
+    <item android:title="Sesión"
+        app:itemTextColor="@color/color_gris"
+        >
         <menu>
             <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
+                android:id="@+id/nav_cerrar_sesion"
+                android:icon="@drawable/icons_apagar"
                 android:title="Cerrar Sesión"
                 app:showAsAction="ifRoom|withText"
                 />

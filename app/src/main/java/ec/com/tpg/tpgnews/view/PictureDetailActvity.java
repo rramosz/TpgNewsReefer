@@ -67,7 +67,7 @@ public class PictureDetailActvity extends AppCompatActivity {
 
         System.out.println("--->"+spinner_depot.getSelectedItem());
         WebServices ws=new WebServices();
-        ws.loginWs();
+        //ws.loginWs();
 
     }
 
