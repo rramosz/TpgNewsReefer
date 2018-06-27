@@ -15,6 +15,24 @@
             android:title="Nueva Alarma Reefer"
             app:showAsAction="ifRoom|withText"
             />
+
+
+        <item
+            android:id="@+id/detalle_tomas_generador"
+            android:icon="@drawable/icons8_relampago_48"
+            android:title="Gestión Power Pack"
+            app:showAsAction="ifRoom|withText"
+            />
+
+
+        <!--<item
+            android:id="@+id/ejemplo_menu"
+            android:icon="@drawable/icons_alarma"
+            android:title="Ejemplo Menu Flotante"
+            app:showAsAction="ifRoom|withText"
+            />-->
+
+
         <!--<item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_menu_gallery"

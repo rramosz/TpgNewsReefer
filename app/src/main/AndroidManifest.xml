@@ -2,22 +2,33 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ec.com.tpg.tpgnews">
 
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-feature
+        android:name="android.hardware.Camera"
+        android:required="true" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <!--
     Se comento, para asignar el nombre a la aplicacion y el icono de la empresa TPG
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"-->
-
+        android:roundIcon="@mipmap/ic_launcher_round"
+    -->
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="true"
         android:icon="@drawable/icono_tpg"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@drawable/icono_tpg"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:screenOrientation="portrait"
+
+        >
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -37,6 +48,7 @@
         </activity>
         <activity
             android:name=".view.CreateAccount"
+            android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -46,8 +58,14 @@
         <activity android:name=".view.DetalleContenedoReeferActivity" />
         <activity
             android:name=".menu_principal"
+            android:configChanges="orientation|screenSize"
             android:label="@string/title_activity_menu_principal"
-            android:theme="@style/AppTheme"></activity>
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+
+            <!-- android:configChanges="orientation|screenSize" >>>>>>>Se usa para que no se pierdan los datos al girar la pantalla -->
+        </activity>
+        <activity android:name=".view.MaterialDesignFloatingActionMenuActivity"></activity>
     </application>
 
 </manifest>

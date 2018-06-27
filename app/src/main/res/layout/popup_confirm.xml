@@ -65,6 +65,7 @@
                     android:background="@color/colorWhite"
                     android:orientation="horizontal">
 
+
                     <ImageView
                         android:layout_marginTop="15dp"
                         android:layout_marginLeft="15dp"
@@ -98,6 +99,7 @@
                     android:background="@color/colorWhite"
                     android:orientation="horizontal"
                     android:layout_marginBottom="10dp">
+
 
                     <Button
                         android:id="@+id/button_aceptar_confirm"
@@ -134,6 +136,8 @@
             </LinearLayout>
         </LinearLayout>
 
+
+
     </android.support.v7.widget.CardView>
 
 
@@ -149,5 +153,7 @@
         app:fabSize="auto"
 
         />
+
+
 
 </android.support.design.widget.CoordinatorLayout>

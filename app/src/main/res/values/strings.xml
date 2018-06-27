@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TPG Alarmas Reefer</string>
+    <string name="app_name">TPG Power Pack</string>
     <string name="app_title_activity_login">Login TPG News</string>
     <string name="hint_username">Ingrese Su Usuario</string>
     <string name="hint_password">Ingrese Su Contraseña</string>

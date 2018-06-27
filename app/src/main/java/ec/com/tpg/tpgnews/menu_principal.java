@@ -16,7 +16,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
+import android.widget.Toast;
 
+import ec.com.tpg.tpgnews.view.MaterialDesignFloatingActionMenuActivity;
+import layout.DetalleTomasGenerador;
+import layout.FragmentListadoGeneradores;
 import layout.activity_consulta_contenedor;
 
 public class menu_principal extends AppCompatActivity
@@ -27,13 +32,18 @@ public class menu_principal extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_principal);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setLogo(R.drawable.icono_tpg);
-        toolbar.setTitle("TPG");
+
+        //toolbar.setTitle("TPG");
+
         Intent myIntent = getIntent(); // gets the previously created intent
         String usuario_logoneado = myIntent.getStringExtra("usuario_logoneado");
-        toolbar.setSubtitle("Bienvenido: "+usuario_logoneado);
 
-        setSupportActionBar(toolbar);
+        TextView txt_usuario=(TextView) findViewById(R.id.txt_usuario);
+        txt_usuario.setText("Usuario: "+usuario_logoneado);
+
+        //toolbar.setSubtitle("Bienvenido: " + usuario_logoneado);
+        //toolbar.setLogo(R.drawable.icono_tpg);
+        //setSupportActionBar(toolbar);
 
         /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -43,9 +53,6 @@ public class menu_principal extends AppCompatActivity
                         .setAction("Action", null).show();
             }
         });*/
-
-
-
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -58,14 +65,31 @@ public class menu_principal extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
 
+        /*activity_consulta_contenedor fragment_cnt = new activity_consulta_contenedor();
 
-        activity_consulta_contenedor fragment_cnt=new activity_consulta_contenedor();
 
         getSupportFragmentManager().beginTransaction().replace(R.id.menu_principal, fragment_cnt).
+                setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).
+                addToBackStack(null).commit();*/
+
+
+        FragmentListadoGeneradores listado_generadores = new FragmentListadoGeneradores();
+
+        getSupportFragmentManager().beginTransaction().replace(R.id.menu_principal, listado_generadores).
                 setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).
                 addToBackStack(null).commit();
 
     }
+
+
+    @Override
+    protected void onStop() {
+        //Toast.makeText(this, ">>>>>Reinicie Sesion<<<<<<", Toast.LENGTH_SHORT).show();
+        System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>ONSTOP<<<<<<<<<<<<<<<<<<<<<<<<<<<");
+        super.onStop();
+        //super.onRestart();
+    }
+
 
     @Override
     public void onBackPressed() {
@@ -93,8 +117,8 @@ public class menu_principal extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_cerrar_sesion) { //Controles del Menu lateral DERECHO
-           // return true;
-            Intent intent =new Intent(this, MainActivity.class);
+            // return true;
+            Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
 
         }
@@ -109,30 +133,61 @@ public class menu_principal extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_nueva_alarma) {
-            activity_consulta_contenedor fragment_cnt=new activity_consulta_contenedor();
+            activity_consulta_contenedor fragment_cnt = new activity_consulta_contenedor();
 
             getSupportFragmentManager().beginTransaction().replace(R.id.menu_principal, fragment_cnt).
                     setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).
                     addToBackStack(null).commit();
 
 
-
             // Handle the camera action
-        //} else if (id == R.id.nav_gallery) {
+            //} else if (id == R.id.nav_gallery) {
 
-        //} else if (id == R.id.nav_slideshow) {
+            //} else if (id == R.id.nav_slideshow) {
 
-        //} else if (id == R.id.nav_manage) {
+            //} else if (id == R.id.nav_manage) {
 
-        } else if (id == R.id.nav_cerrar_sesion) {
-
-            Intent intent =new Intent(this, MainActivity.class);
-            startActivity(intent);
+        } else {
 
 
-        } /*else if (id == R.id.nav_send) {
+            if (id == R.id.detalle_tomas_generador) {
+                //DetalleTomasGenerador  detalle_tomas=new DetalleTomasGenerador();
+                FragmentListadoGeneradores listado_generadores = new FragmentListadoGeneradores();
+
+                getSupportFragmentManager().beginTransaction().replace(R.id.menu_principal, listado_generadores).
+                        setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).
+                        addToBackStack(null).commit();
+
+
+                // Handle the camera action
+                //} else if (id == R.id.nav_gallery) {
+
+                //} else if (id == R.id.nav_slideshow) {
+
+                //} else if (id == R.id.nav_manage) {
+
+            } else {
+                /*if (id == R.id.ejemplo_menu) {
+                    //DetalleTomasGenerador  detalle_tomas=new DetalleTomasGenerador();
+                    MaterialDesignFloatingActionMenuActivity listado_generadores = new MaterialDesignFloatingActionMenuActivity();
+
+                    getSupportFragmentManager().beginTransaction().replace(R.id.menu_principal, listado_generadores).
+                            setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).
+                            addToBackStack(null).commit();
+
+                } else*/ if (id == R.id.nav_cerrar_sesion) {
+
+                    Intent intent = new Intent(this, MainActivity.class);
+                    startActivity(intent);
+
+
+                }
+            } /*else if (id == R.id.nav_send) {
 
         }*/
+
+        }
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

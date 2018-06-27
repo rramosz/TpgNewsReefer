@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floating_button_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_anchorGravity="top|right|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/icon_cerrar"
+        app:backgroundTint="@color/colorAccent"
+        app:layout_anchor="@+id/picture_card_popup"
+        app:fabSize="auto"
+
+        />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/picture_card_popup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/height_bottom_bar"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="100dp"
+        android:elevation="10dp"
+        app:cardCornerRadius="@dimen/corner_radios">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.30"
+                    android:background="@drawable/icono_tpg" />
+
+                <TextView
+                    android:id="@+id/titulo_mensaje"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.00"
+                    android:gravity="center"
+                    android:text="Actualización de Toma"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="270dp"
+                android:background="@color/colorWhite"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@color/colorWhite"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:id="@+id/image_icon_popup"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/icons8_servicios_48" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/label_genera"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="15dp"
+                                android:layout_weight="0.4"
+                                android:gravity="center_vertical|center_horizontal"
+                                android:orientation="vertical"
+                                android:text="Generador : "
+                                android:textColor="@color/color_gris"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txt_label_name_generador"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="15dp"
+                                android:layout_weight="0.6"
+                                android:gravity="center_vertical|center_horizontal"
+                                android:orientation="vertical"
+                                android:text="Nombre del Generador"
+                                android:textColor="@color/color_gris"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/label_genera_toma"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="15dp"
+                                android:layout_weight="0.4"
+                                android:gravity="center_vertical|center_horizontal"
+                                android:orientation="vertical"
+                                android:text="Toma                : "
+                                android:textColor="@color/color_gris"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txt_label_name_toma"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="15dp"
+                                android:layout_weight="0.60"
+                                android:gravity="center_vertical|center_horizontal"
+                                android:orientation="vertical"
+                                android:text="Nombre de la toma"
+                                android:textColor="@color/color_gris"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/label_estado_toma"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="15dp"
+                                android:layout_weight="0.4"
+                                android:gravity="center_vertical|center_horizontal"
+                                android:orientation="vertical"
+                                android:text="Nuevo Estado : "
+                                android:textColor="@color/color_gris"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txt_label_name_estado"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="15dp"
+                                android:layout_weight="0.60"
+                                android:gravity="center_vertical|center_horizontal"
+                                android:orientation="vertical"
+                                android:text="estado"
+                                android:textColor="@color/color_gris"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="vertical">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                android:textColor="@color/colorBlack"
+                                android:theme="@style/EditTexBlack">
+
+                                <android.support.design.widget.TextInputEditText
+                                    android:id="@+id/txt_observacion"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Obervación"
+                                    android:inputType="textMultiLine"
+                                    android:maxLength="150"
+                                    android:textSize="15dp" />
+
+                            </android.support.design.widget.TextInputLayout>
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/colorWhite"
+                    android:orientation="horizontal">
+
+
+                    <Button
+                        android:id="@+id/button_aceptar_confirm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="0.50"
+                        android:background="@color/colorAccent"
+                        android:onClick="login"
+                        android:text="Aceptar"
+                        android:theme="@style/RaisedButtonDark"
+
+                        />
+
+                    <Button
+                        android:id="@+id/button_cancelar_confirm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="0.50"
+                        android:background="@color/color_gris"
+                        android:onClick="login"
+                        android:text="Cancelar"
+                        android:theme="@style/RaisedButtonDark"
+
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+
+</android.support.design.widget.CoordinatorLayout>

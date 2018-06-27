@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/picture_card"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/height_picture"
+    cardview:cardCornerRadius="@dimen/corner_radios"
+    android:layout_marginBottom="15dp"
+
+    >
+<!--android:layout_marginBottom="@dimen/height_bottom_bar"-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_picture"
+            android:background="@drawable/foto_tpg"
+            android:scaleType="centerCrop"
+            android:id="@+id/picture_card_image_generador"
+            android:transitionName="@string/transition_name_picture"
+
+            />
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="bottom"
+            android:paddingLeft="@dimen/paddig_left"
+            android:paddingBottom="@dimen/paddig_left"
+            android:background="@color/background_text_card_view"
+            >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="bottom"
+
+
+            android:weightSum="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/nombre_generador"
+                android:text="Ricky Ramos"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_size_username_card_generador"
+                android:layout_gravity="left"
+                android:layout_weight="1" />
+
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/icons8_desconectado"
+                android:scaleType="centerCrop"
+                android:id="@+id/img_apagado"
+                android:transitionName="@string/transition_name_picture"
+                android:layout_marginRight="20dp"
+
+                />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/icons_gasolina"
+                android:scaleType="centerCrop"
+                android:id="@+id/img_abasteciendo_cmbtbl"
+                android:transitionName="@string/transition_name_picture"
+                android:layout_marginRight="20dp"
+
+                />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/filas_columnas"
+                    android:text="FxC : 4x7 "
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/firstword_text_site_card"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:layout_marginRight="16dp"
+                    android:id="@+id/tomas_disponibles"
+                    android:text=" T. Ocpds. : 10  T. Utiles : 25   T. Libres :15"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/firstword_text_site_card"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/like_margin_top_card"
+                >
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_empresa_proveedora"
+                    android:text="Proveedor de Generadores"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/firstword_text_site_card"
+                    />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:id="@+id/txt_bloque"
+                    android:text="Bloque: T1A"
+                    android:layout_marginRight="16dp"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/firstword_text_site_card"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/like_margin_top_card"
+                >
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_fecha_desde"
+                    android:text="27/03/2018 10:41:00   5 Días"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/firstword_text_site_card"
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/loadingPanelCardView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@xml/borde_layout"
+            >
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminate="true" />
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</android.support.v7.widget.CardView>

@@ -60,4 +60,40 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+
+    <style name="RedButtonTheme" parent="Theme.AppCompat.Light">
+        <item name="android:colorButtonNormal">@color/colorPrimaryDark</item>
+        <item name="android:colorControlHighlight">@color/colorPrimary</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+
+    <style name="GrisButtonTheme" parent="Theme.AppCompat.Light">
+        <item name="android:colorButtonNormal">@color/colorGris</item>
+        <item name="android:colorControlHighlight">@color/colorGrisOscuro</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name="GreenButtonTheme" parent="Theme.AppCompat.Light">
+        <item name="android:colorButtonNormal">@color/colorGreen</item>
+        <item name="android:colorControlHighlight">@color/colorGreenDark</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+
+
+    <style name="WhiteButtonTheme" parent="Theme.AppCompat.Light">
+        <item name="android:colorButtonNormal">@color/colorWhite</item>
+        <item name="android:colorControlHighlight">@color/colorWhiteDark</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+
+
+    <style name="BlueButtonTheme" parent="Theme.AppCompat.Light">
+        <item name="android:colorButtonNormal">@color/colorBlue</item>
+        <item name="android:colorControlHighlight">@color/colorAccent</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+
 </resources>

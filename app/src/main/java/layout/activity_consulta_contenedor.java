@@ -3,6 +3,7 @@ package layout;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
@@ -52,12 +53,12 @@ public class activity_consulta_contenedor extends Fragment {
         dialog_loading.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
         dialog_loading.setCancelable(false);
 
-        dialog= new Dialog(getActivity());
+        dialog = new Dialog(getActivity());
         dialog.setContentView(R.layout.popup_alert);
         dialog.setCancelable(false);
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
 
-        FloatingActionButton btnclose          = (FloatingActionButton) dialog.findViewById(R.id.floating_button_close);
+        FloatingActionButton btnclose = (FloatingActionButton) dialog.findViewById(R.id.floating_button_close);
         btnclose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -83,8 +84,8 @@ public class activity_consulta_contenedor extends Fragment {
                     consultaContenedor();
                     return true;
                 }
-                    return false;
-               // return false;
+                return false;
+                // return false;
             }
 
         });
@@ -109,20 +110,20 @@ public class activity_consulta_contenedor extends Fragment {
 
                 return;
             }
+
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count,
                                           int after) {
                 // TODO Auto-generated method stub
                 return;
             }
+
             @Override
             public void afterTextChanged(Editable s) {
                 return;
             }
 
         });
-
-
 
 
         return view;//inflater.inflate(R.layout.fragment_activity_consulta_contenedor, container, false);
@@ -135,82 +136,69 @@ public class activity_consulta_contenedor extends Fragment {
         String cnt = txt_cnt.getText().toString();
 
 
-        if(cnt==null)
-        {
+        if (cnt == null) {
             System.out.println(">>>>>>>>>>>>>>>1<<<<<<<<<<<<<<");
             dialog_loading.hide();
-            TextView txt_label_mensaje= (TextView) dialog.findViewById(R.id.mensaje_descripcion);
+            TextView txt_label_mensaje = (TextView) dialog.findViewById(R.id.mensaje_descripcion);
             txt_label_mensaje.setText("Por favor ingrese el número de Contenedor");
             dialog.show();
-        }
-        else
-        {
-            if(cnt.isEmpty())
-            {
+        } else {
+            if (cnt.isEmpty()) {
                 System.out.println(">>>>>>>>>>>>>>>2<<<<<<<<<<<<<<");
                 dialog_loading.hide();
-                TextView txt_label_mensaje= (TextView) dialog.findViewById(R.id.mensaje_descripcion);
+                TextView txt_label_mensaje = (TextView) dialog.findViewById(R.id.mensaje_descripcion);
                 txt_label_mensaje.setText("Por favor ingrese el número de Contenedor");
                 dialog.show();
 
-            }
-            else
-            {
+            } else {
                 cnt = cnt.toUpperCase();
                 cnt = cnt.trim();
 
 
-
-                if(cnt.length()!=11)
-                {    System.out.println(">>>>>>>>>>>>>>>3<<<<<<<<<<<<<<");
+                if (cnt.length() != 11) {
+                    System.out.println(">>>>>>>>>>>>>>>3<<<<<<<<<<<<<<");
                     dialog_loading.hide();
-                    TextView txt_label_mensaje= (TextView) dialog.findViewById(R.id.mensaje_descripcion);
+                    TextView txt_label_mensaje = (TextView) dialog.findViewById(R.id.mensaje_descripcion);
                     txt_label_mensaje.setText("Por favor ingrese el número de Contenedor de forma correcta ejemplo (HLXU1234567).");
                     dialog.show();
 
-                }
-                else
-                {
-                    String sigla_cnt=new String();
-                    String num_cnt=new String();
+                } else {
+                    String sigla_cnt = new String();
+                    String num_cnt = new String();
                     sigla_cnt = cnt.substring(0, 4);
-                    num_cnt=cnt.substring(5);
-                    int bandera_ok=0;
-                    for(int ik=0; ik<sigla_cnt.length();ik++)
-                    {
-                        char char_letra=sigla_cnt.charAt(ik);
-                        if(!Character.isLetter(char_letra))
-                        {    System.out.println(">>>>>>>>>>>>>>>4<<<<<<<<<<<<<<");
+                    num_cnt = cnt.substring(5);
+                    int bandera_ok = 0;
+                    for (int ik = 0; ik < sigla_cnt.length(); ik++) {
+                        char char_letra = sigla_cnt.charAt(ik);
+                        if (!Character.isLetter(char_letra)) {
+                            System.out.println(">>>>>>>>>>>>>>>4<<<<<<<<<<<<<<");
                             dialog_loading.hide();
-                            TextView txt_label_mensaje= (TextView) dialog.findViewById(R.id.mensaje_descripcion);
+                            TextView txt_label_mensaje = (TextView) dialog.findViewById(R.id.mensaje_descripcion);
                             txt_label_mensaje.setText("Por favor ingrese el número de Contenedor de forma correcta ejemplo (HLXU1234567).");
                             dialog.show();
-                            bandera_ok= 1;
+                            bandera_ok = 1;
                             break;
 
                         }
                     }
 
-                    if(bandera_ok==0)
-                    {
-                        for(int ik=0; ik<num_cnt.length();ik++)
-                        {
-                            char char_letra=num_cnt.charAt(ik);
-                            if(!Character.isDigit(char_letra))
-                            {  System.out.println(">>>>>>>>>>>>>>>5<<<<<<<<<<<<<<");
+                    if (bandera_ok == 0) {
+                        for (int ik = 0; ik < num_cnt.length(); ik++) {
+                            char char_letra = num_cnt.charAt(ik);
+                            if (!Character.isDigit(char_letra)) {
+                                System.out.println(">>>>>>>>>>>>>>>5<<<<<<<<<<<<<<");
                                 dialog_loading.hide();
-                                TextView txt_label_mensaje= (TextView) dialog.findViewById(R.id.mensaje_descripcion);
+                                TextView txt_label_mensaje = (TextView) dialog.findViewById(R.id.mensaje_descripcion);
                                 txt_label_mensaje.setText("Por favor ingrese el número de Contenedor de forma correcta ejemplo (HLXU1234567).");
                                 dialog.show();
-                                bandera_ok= 1;
+                                bandera_ok = 1;
                                 break;
 
                             }
                         }
                     }
 
-                    if(bandera_ok==0)
-                    {
+                    if (bandera_ok == 0) {
 
                         WebServices ws = new WebServices();
                         Errores errores = ws.consultaContenedor(cnt);
@@ -220,8 +208,8 @@ public class activity_consulta_contenedor extends Fragment {
                             //Si el contenedor existe de forma exitosa, se carga el nuevo fragment
 
                             Gson json = new Gson();
-                            String contenedor=json.toJson( ws.getContenedor());
-                            String lista_depositos=json.toJson( ws.getArray_deposito());
+                            String contenedor = json.toJson(ws.getContenedor());
+                            String lista_depositos = json.toJson(ws.getArray_deposito());
 
 
                             Bundle bundle = new Bundle();
@@ -230,9 +218,7 @@ public class activity_consulta_contenedor extends Fragment {
 // set MyFragment Arguments
 
 
-
-
-                            FragmentRegAlarmaContenedor fragment_cnt_reg_alarma=new FragmentRegAlarmaContenedor();
+                            FragmentRegAlarmaContenedor fragment_cnt_reg_alarma = new FragmentRegAlarmaContenedor();
                             fragment_cnt_reg_alarma.setArguments(bundle);
 
                             getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.menu_principal, fragment_cnt_reg_alarma).
@@ -240,11 +226,9 @@ public class activity_consulta_contenedor extends Fragment {
                                     addToBackStack(null).commit();
 
 
-                        }
-                        else
-                        {
+                        } else {
                             dialog_loading.hide();
-                            TextView txt_label_mensaje= (TextView) dialog.findViewById(R.id.mensaje_descripcion);
+                            TextView txt_label_mensaje = (TextView) dialog.findViewById(R.id.mensaje_descripcion);
                             txt_label_mensaje.setText(errores.getMsg_error());
                             dialog.show();
 
@@ -254,29 +238,21 @@ public class activity_consulta_contenedor extends Fragment {
                     }
 
 
-
-
                 }
 
 
             }
 
 
-
         }
 
 
-
-
     }
 
 
-
-    public void ocultarPopupAlert()
-    {
+    public void ocultarPopupAlert() {
         dialog.hide();
     }
-
 
 
 }

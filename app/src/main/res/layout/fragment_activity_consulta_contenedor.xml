@@ -96,8 +96,8 @@
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/action_button_cnt_cons"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_margin="@dimen/fab_margin"
         android:src="@drawable/ic_icons8_search_filled_50"
         app:backgroundTint="@color/colorAccent"
